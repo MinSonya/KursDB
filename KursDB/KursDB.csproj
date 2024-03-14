@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49D926F9-1F46-452F-88DE-59DE3BA1F80C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KursDB</RootNamespace>
+    <AssemblyName>KursDB</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.33.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector NET 8.0.33\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DeliveryBill\AddDeliveryBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeliveryBill\AddDeliveryBill.Designer.cs">
+      <DependentUpon>AddDeliveryBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryContract\DeliveryContractInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeliveryContract\DeliveryContractInfo.Designer.cs">
+      <DependentUpon>DeliveryContractInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\OrderInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\OrderInfo.Designer.cs">
+      <DependentUpon>OrderInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesBill\AddSalesBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesBill\AddSalesBill.Designer.cs">
+      <DependentUpon>AddSalesBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryBill\EditDeliveryBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeliveryBill\EditDeliveryBill.Designer.cs">
+      <DependentUpon>EditDeliveryBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesBill\EditSalesBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesBill\EditSalesBill.Designer.cs">
+      <DependentUpon>EditSalesBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesContract\SalesContractInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesContract\SalesContractInfo.Designer.cs">
+      <DependentUpon>SalesContractInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesContract\AddSalesContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesContract\AddSalesContract.Designer.cs">
+      <DependentUpon>AddSalesContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryBill\DeliveryBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeliveryBill\DeliveryBill.Designer.cs">
+      <DependentUpon>DeliveryBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryContract\AddDeliveryContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeliveryContract\AddDeliveryContract.Designer.cs">
+      <DependentUpon>AddDeliveryContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryContract\DelContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeliveryContract\DelContract.Designer.cs">
+      <DependentUpon>DelContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryContract\EditDeliveryContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeliveryContract\EditDeliveryContract.Designer.cs">
+      <DependentUpon>EditDeliveryContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesContract\EditSalesContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesContract\EditSalesContract.Designer.cs">
+      <DependentUpon>EditSalesContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesBill\SalesBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesBill\SalesBill.Designer.cs">
+      <DependentUpon>SalesBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesContract\SalesContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesContract\SalesContract.Designer.cs">
+      <DependentUpon>SalesContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\AddStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\AddStock.Designer.cs">
+      <DependentUpon>AddStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clients\AddClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clients\AddClients.Designer.cs">
+      <DependentUpon>AddClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cosmetica\AddCosm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cosmetica\AddCosm.Designer.cs">
+      <DependentUpon>AddCosm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clients\EditClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clients\EditClients.Designer.cs">
+      <DependentUpon>EditClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\EditStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\EditStock.Designer.cs">
+      <DependentUpon>EditStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generator\AddGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Generator\AddGenerator.Designer.cs">
+      <DependentUpon>AddGenerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\AddOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\AddOrder.Designer.cs">
+      <DependentUpon>AddOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BD.cs" />
+    <Compile Include="Clients\Clients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clients\Clients.Designer.cs">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cosmetica\Cosm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cosmetica\Cosm.Designer.cs">
+      <DependentUpon>Cosm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dealer\Dealer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dealer\Dealer.Designer.cs">
+      <DependentUpon>Dealer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cosmetica\EditCosm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cosmetica\EditCosm.Designer.cs">
+      <DependentUpon>EditCosm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dealer\EditDealer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dealer\EditDealer.Designer.cs">
+      <DependentUpon>EditDealer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generator\EditGen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Generator\EditGen.Designer.cs">
+      <DependentUpon>EditGen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\EditOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\EditOrder.Designer.cs">
+      <DependentUpon>EditOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generator\Generator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Generator\Generator.Designer.cs">
+      <DependentUpon>Generator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\Orders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\Orders.Designer.cs">
+      <DependentUpon>Orders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stock\Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\Stock.Designer.cs">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DeliveryBill\AddDeliveryBill.resx">
+      <DependentUpon>AddDeliveryBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeliveryContract\DeliveryContractInfo.resx">
+      <DependentUpon>DeliveryContractInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\OrderInfo.resx">
+      <DependentUpon>OrderInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesBill\AddSalesBill.resx">
+      <DependentUpon>AddSalesBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeliveryBill\EditDeliveryBill.resx">
+      <DependentUpon>EditDeliveryBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesBill\EditSalesBill.resx">
+      <DependentUpon>EditSalesBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesContract\SalesContractInfo.resx">
+      <DependentUpon>SalesContractInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesContract\AddSalesContract.resx">
+      <DependentUpon>AddSalesContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeliveryBill\DeliveryBill.resx">
+      <DependentUpon>DeliveryBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeliveryContract\AddDeliveryContract.resx">
+      <DependentUpon>AddDeliveryContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeliveryContract\DelContract.resx">
+      <DependentUpon>DelContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeliveryContract\EditDeliveryContract.resx">
+      <DependentUpon>EditDeliveryContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesContract\EditSalesContract.resx">
+      <DependentUpon>EditSalesContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesBill\SalesBill.resx">
+      <DependentUpon>SalesBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesContract\SalesContract.resx">
+      <DependentUpon>SalesContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\AddStock.resx">
+      <DependentUpon>AddStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clients\AddClients.resx">
+      <DependentUpon>AddClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cosmetica\AddCosm.resx">
+      <DependentUpon>AddCosm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clients\EditClients.resx">
+      <DependentUpon>EditClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\EditStock.resx">
+      <DependentUpon>EditStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generator\AddGenerator.resx">
+      <DependentUpon>AddGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\AddOrder.resx">
+      <DependentUpon>AddOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clients\Clients.resx">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cosmetica\Cosm.resx">
+      <DependentUpon>Cosm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dealer\Dealer.resx">
+      <DependentUpon>Dealer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cosmetica\EditCosm.resx">
+      <DependentUpon>EditCosm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dealer\EditDealer.resx">
+      <DependentUpon>EditDealer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generator\EditGen.resx">
+      <DependentUpon>EditGen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\EditOrder.resx">
+      <DependentUpon>EditOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generator\Generator.resx">
+      <DependentUpon>Generator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\Orders.resx">
+      <DependentUpon>Orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Stock\Stock.resx">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
